@@ -26,7 +26,7 @@ import com.vaadin.v7.ui.TextField;
  */
 @Title("Addressbook")
 @Theme("valo")
-@Widgetset("com.vaadin.v7.Vaadin7WidgetSet")
+@Widgetset("com.vaadin.DefaultWidgetSet")
 public class AddressbookUI extends UI {
 
     /*
@@ -142,7 +142,7 @@ public class AddressbookUI extends UI {
      * application.
      */
     @WebServlet(urlPatterns = "/*")
-    @VaadinServletConfiguration(ui = AddressbookUI.class, productionMode = false)
+    @VaadinServletConfiguration(ui = AddressbookUI.class, productionMode = true, heartbeatInterval = 300)
     public static class MyUIServlet extends VaadinServlet {
     }
 
